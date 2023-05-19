@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Загрузка данных из CSV-файла
+data = pd.read_csv("data.csv")
+
+# Проведение базового анализа данных
+mean_age = data["Age"].mean()
+max_salary = data["Salary"].max()
+min_salary = data["Salary"].min()
+
+# Визуализация данных
+plt.figure(figsize=(10, 6))
+plt.scatter(data["Age"], data["Salary"])
+plt.xlabel("Age")
+plt.ylabel("Salary")
+plt.title("Age vs Salary")
+plt.show()
+
+# Вывод результатов анализа данных
+print("Mean Age:", mean_age)
+print("Max Salary:", max_salary)
+print("Min Salary:", min_salary)
